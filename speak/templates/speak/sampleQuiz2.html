@@ -1,0 +1,676 @@
+{% extends 'speak/BASE.html' %}
+{% block activeQuizes %}class="active" {% endblock %}
+
+{% block body %}
+
+
+    <div class="container">
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">بچے کی طرح معصوم</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="18" id="18A" value="As innocente as a baby" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="18A">As innocente as a baby</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="18" id="18B" value="As innosent as a baby" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="18B">As innosent as a baby</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="18" id="correctOp17" value="As innocent as a baby" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel17" for="correctOp17">As innocent as a baby</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">معمہ حل کرنا تو دور کی بات میں معمہ حل کرنے کی سوچ
+                    بھی نہیں سکتا</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="9" id="9A"
+                                   value="Not to speak of solveing a puzzle, I can not think to solve a puzzle "
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="9A">Not to speak of solveing a puzzle, I can not think to solve
+                                a puzzle </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="9" id="9B"
+                                   value="Not to speak of solving a puzule, I can not think to solve a puzzle "
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="9B">Not to speak of solving a puzule, I can not think to solve a
+                                puzzle </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="9" id="correctOp8"
+                                   value="Not to speak of solving a puzzle, I can not think to solve a puzzle "
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel8" for="correctOp8">Not to speak of solving a puzzle,
+                                I can not think to solve a puzzle </label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">مجھے مارنا تو دور کی بات وہ مجھے ہاتھ بھی نہیں لگا
+                    سکتا</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="5" id="correctOp4"
+                                   value="Not to speak of beating me, he can not touch me" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel4" for="correctOp4">Not to speak of beating me, he
+                                can not touch me</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="5" id="5B"
+                                   value="Not to speak of beanting me, he can not touch me" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="5B">Not to speak of beanting me, he can not touch me</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="5" id="5C"
+                                   value="Not to speak of beating me, he can not touche me" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="5C">Not to speak of beating me, he can not touche me</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">جنونی</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="12" id="12A" value="Manice" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="12A">Manice</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="12" id="correctOp11" value="Maniac" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel11" for="correctOp11">Maniac</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="12" id="12C" value="Maniace" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="12C">Maniace</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">پتھر کی طرح سخت</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="19" id="correctOp18" value="As hard as a flint" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel18" for="correctOp18">As hard as a flint</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="19" id="19B" value="As hard as a flinte" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="19B">As hard as a flinte</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="19" id="19C" value="As hard as a flient" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="19C">As hard as a flient</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">جانا تو دور کی بات وہ تو صبح اُٹھا ہی نہیں </p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="7" id="correctOp6"
+                                   value="Not to speak of going, he did not get up in the morning" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel6" for="correctOp6">Not to speak of going, he did not
+                                get up in the morning</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="7" id="7B"
+                                   value="Not to speak of going, he did not got up in the morning" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="7B">Not to speak of going, he did not got up in the
+                                morning</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="7" id="7C"
+                                   value="Not to speak of going, he did not gets up in the morning" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="7C">Not to speak of going, he did not gets up in the
+                                morning</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">سچائی کی مانند تلخ</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="20" id="20A" value="As harsh as trueth" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="20A">As harsh as trueth</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="20" id="correctOp19" value="As harsh as truth" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel19" for="correctOp19">As harsh as truth</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="20" id="20C" value="As harsh as truthe" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="20C">As harsh as truthe</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">کمپیوٹر چلانا تو دور کی بات وہ اُسکو کھل بند بھی
+                    نہیں کر سکت</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="10" id="correctOp9"
+                                   value="Not to speak of operating the computer, he can not on/off the it."
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel9" for="correctOp9">Not to speak of operating the
+                                computer, he can not on/off the it.</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="10" id="10B"
+                                   value="Not to speak of operatings the computer, he can not on/off the it."
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="10B">Not to speak of operatings the computer, he can not on/off
+                                the it.</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="10" id="10C"
+                                   value="Not to speak to operating the computer, he can not on/off the it."
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="10C">Not to speak to operating the computer, he can not on/off
+                                the it.</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">باذوق </p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="11" id="11A" value="Aesthatic" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="11A">Aesthatic</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="11" id="11B" value="Aisthetic" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="11B">Aisthetic</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="11" id="correctOp10" value="Aesthetic" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel10" for="correctOp10">Aesthetic</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">طاعون کی مانند ہلاکت انگیز</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="16" id="16A" value="As killing as plegue" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="16A">As killing as plegue</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="16" id="correctOp15" value="As killing as plague" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel15" for="correctOp15">As killing as plague</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="16" id="16C" value="As killing as plagu" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="16C">As killing as plagu</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">سونا تو دور کی بات وہ تو لیٹ بھی نہیں سکتا</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="8" id="8A" value="Not to speak of sleep, he can not lay"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="8A">Not to speak of sleep, he can not lay</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="8" id="correctOp7"
+                                   value="Not to speak of sleeping, he can not lay" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel7" for="correctOp7">Not to speak of sleeping, he can
+                                not lay</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="8" id="8C" value="Not to speak of sleeping, he can not ley"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="8C">Not to speak of sleeping, he can not ley</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">مکھی کی مانند خوش و خرم</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="17" id="correctOp16" value="As joyful as a fly" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel16" for="correctOp16">As joyful as a fly</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="17" id="17B" value="As joyeful as a fly" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="17B">As joyeful as a fly</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="17" id="17C" value="As joyfull as a fly" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="17C">As joyfull as a fly</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">چٹورا</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="13" id="correctOp12" value="Gourmand" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel12" for="correctOp12">Gourmand</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="13" id="13B" value="Gourmend" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="13B">Gourmend</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="13" id="13C" value="Guormand" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="13C">Guormand</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">پارٹی میں جانا تو دور کی بات وہ تو گھر سے باہر
+                    نہیں نکلتا</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="4" id="4A"
+                                   value="Not to speak of go to the party, he does not come out from home" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="4A">Not to speak of go to the party, he does not come out from
+                                home</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="4" id="correctOp3"
+                                   value="Not to speak of going to the party, he does not come out from home"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel3" for="correctOp3">Not to speak of going to the
+                                party, he does not come out from home</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="4" id="4C"
+                                   value="Not to speak of going to the party, he do not come out from home"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="4C">Not to speak of going to the party, he do not come out from
+                                home</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">گاڑی چلانا تو دور کی بات وہ تو سائیکل نہیں چلا
+                    سکتا</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="1" id="1A"
+                                   value="Not to speak of driveing car, he can not ride a cycle" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="1A">Not to speak of driveing car, he can not ride a
+                                cycle</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="1" id="1B"
+                                   value="Not to speak of driving car, he can not rides a cycle" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="1B">Not to speak of driving car, he can not rides a
+                                cycle</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="1" id="correctOp0"
+                                   value="Not to speak of driving car, he can not ride a cycle" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel0" for="correctOp0">Not to speak of driving car, he
+                                can not ride a cycle</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">انگلش بولنا تو دور کی بات تم انگلش پڑھ نہیں
+                    سکتے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="2" id="correctOp1"
+                                   value="Not to speak of speaking english, you can not read english" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel1" for="correctOp1">Not to speak of speaking english,
+                                you can not read english</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="2" id="2B"
+                                   value="Not to speak of  english, you can not write english" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="2B">Not to speak of english, you can not write english</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="2" id="2C"
+                                   value="Not to speak of speaking , you do not read english" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="2C">Not to speak of speaking , you do not read english</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">پڑھانا تو دور کی با ت وہ تو صحیح پڑھ بھی نہیں
+                    سکتا </p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="6" id="6A" value="Not to speak of studying , he can not read"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="6A">Not to speak of studying , he can not read</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="6" id="6B" value="Not to speak of reding , he can read"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="6B">Not to speak of reding , he can read</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="6" id="correctOp5"
+                                   value="Not to speak of teaching, he can not read" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel5" for="correctOp5">Not to speak of teaching, he can
+                                not read</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">اُس سے بات کرنا تو دُور کی بات تم تو اُسکی طرف
+                    دیکھ بھی نہیں سکتے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="3" id="3A"
+                                   value="Not to speak of talking to him, you can not look him" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="3A">Not to speak of talking to him, you can not look him</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="3" id="correctOp2"
+                                   value="Not to speak of talking to him, you can not look at him" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel2" for="correctOp2">Not to speak of talking to him,
+                                you can not look at him</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="3" id="3C"
+                                   value="Not to speak of talking  him, you can not look at him" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="3C">Not to speak of talking him, you can not look at him</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">خوش گفتار</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="14" id="14A" value="Eloquant" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="14A">Eloquant</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="14" id="correctOp13" value="Eloquent" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel13" for="correctOp13">Eloquent</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="14" id="14C" value="Elequent" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="14C">Elequent</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">کم گو</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="15" id="15A" value="Taceturn" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="15A">Taceturn</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="15" id="15B" value="Tacitorn" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="15B">Tacitorn</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="15" id="correctOp14" value="Taciturn" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel14" for="correctOp14">Taciturn</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <input type="button" class="btn" value="View Score" onclick="score()">
+        </form>
+
+        <h1 style="padding-left: 3%" id="score">Score:</h1>
+    </div>
+    <script>
+         function viewCorrect() {
+                for (var i = 0; i < 20; i++) {
+                    document.getElementById("correctLabel" + i.toString()).style.backgroundColor = "#b8f2a2";
+                }
+            }
+            function score() {
+                var temp = 0;
+                for (var i = 0; i < 20; i++) {
+                    if (document.getElementById("correctOp" + i.toString()).checked) {
+                        temp++;
+                    }
+                }
+
+                temp = (temp / 20) * 100;
+
+                if (temp >= 86) {
+                    document.getElementById("score").innerHTML = "Score: " + temp.toString() + ". Great Job!. You should now proceed to the quiz.";
+                } else if (temp >= 72) {
+                    document.getElementById("score").innerHTML = "Score: " + temp.toString() + ". Nice! You got potential to do better.";
+                } else {
+                    document.getElementById("score").innerHTML = "Score: " + temp.toString() + ". You should take the lesson again.";
+                }
+            }
+    </script>
+
+
+{% endblock %}

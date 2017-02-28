@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1b3a992a-bc0b-4bf9-818f-946b7dc3c264" name="speak" url="http://ftp.easyspokenenglish.com.pk">
+        <fileTransfer host="ftp.easyspokenenglish.com.pk" port="21" password="dfd1dfebdffadfe9df92dfd7dff7dfe2dfe6df84df9ddff9" username="Saad@easyspokenenglish.com.pk">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

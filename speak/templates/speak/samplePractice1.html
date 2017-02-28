@@ -1,0 +1,938 @@
+{% extends 'speak/BASE.html' %}
+{% block activePractice %}class="active" {% endblock %}
+
+{% block body %}
+
+
+
+    <div class="container">
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">وہ ناشتے میں صرف انڈے کی زردی استعمال کر تا ہے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="1" id="correctOp0" value="He uses only yolk of eggs in breakfast "
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel0" for="correctOp0">He uses only yolk of eggs in
+                                breakfast </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="1" id="1B" value="He use only yolk of eggs in breakfast "
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="1B">He use only yolk of eggs in breakfast </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="1" id="1C" value="He uses only yolk of eggs in brakefast "
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="1C">He uses only yolk of eggs in brakefast </label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">وہ دودہ میں انڈے کی سفیدی ملاتا ہے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="2" id="2A" value="He mix albumen in the milk" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="2A">He mix albumen in the milk</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="2" id="2B" value="He mixes albuman in the milk" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="2B">He mixes albuman in the milk</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="2" id="correctOp1" value="He mixes albumen in the milk"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel1" for="correctOp1">He mixes albumen in the
+                                milk</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">میں رات کو ناول کی ورق گردانی کرتا ہوں</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="3" id="3A" value="I skims the novel at night" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="3A">I skims the novel at night</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="3" id="correctOp2" value="I skim the novel at night"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel2" for="correctOp2">I skim the novel at night</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="3" id="3C" value="I skim the novle at night" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="3C">I skim the novle at night</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">سردیوں میں مچھر بہت بھنبھناتے ہیں</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="4" id="correctOp3" value="Mosquitos buzz too much in winter"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel3" for="correctOp3">Mosquitos buzz too much in
+                                winter</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="4" id="4B" value="Mosquetos buzz too much in winter" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="4B">Mosquetos buzz too much in winter</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="4" id="4C" value="Mosquitos buzzes too much in winter"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="4C">Mosquitos buzzes too much in winter</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">وہ آفس میں نلکا پانی پیتا ہے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="5" id="5A" value="He takes tape water in the office" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="5A">He takes tape water in the office</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="5" id="5B" value="He taks tap water in the office" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="5B">He taks tap water in the office</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="5" id="correctOp4" value="He takes tap water in the office"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel4" for="correctOp4">He takes tap water in the
+                                office</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">ہم اساتذہ کی بے پناہ عزت کر تے ہیں</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="6" id="correctOp5" value="We hold our teachers in great esteem"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel5" for="correctOp5">We hold our teachers in great
+                                esteem</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="6" id="6B" value="We hold our teachers with  great esteem"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="6B">We hold our teachers with great esteem</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="6" id="6C" value="We hold our teachers in great esteam"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="6C">We hold our teachers in great esteam</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">میں لیکچر کے تمام اہم نکات لکھ لیتا ہوں</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="7" id="7A" value="I jot down all the important points of lecture"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="7A">I jot down all the important points of lecture</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="7" id="correctOp6"
+                                   value="I jot down all the important points of lecture" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel6" for="correctOp6">I jot down all the important
+                                points of lecture</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="7" id="7C" value="I jolt down all the important points of lecture"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="7C">I jolt down all the important points of lecture</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">ہمارے استاد ہمیں بڑی شفقت سے پڑھاتے ہیں</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="8" id="8A" value="Our teachers teaches us very leniently"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="8A">Our teachers teaches us very leniently</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="8" id="correctOp7" value="Our teachers teach us very leniently"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel7" for="correctOp7">Our teachers teach us very
+                                leniently</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="8" id="8C" value="Our teachers teach us very leneintly"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="8C">Our teachers teach us very leneintly</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">وہ روزآنہ قرآن کی کچھ آیات کی تلاوت کرتاہے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="9" id="9A" value="He recites some verse of the Holy Quran daily"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="9A">He recites some verse of the Holy Quran daily</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="9" id="9B" value="He recite some verses of the Holy Quran daily"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="9B">He recite some verses of the Holy Quran daily</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="9" id="correctOp8"
+                                   value="He recites some verses of the Holy Quran daily" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel8" for="correctOp8">He recites some verses of the
+                                Holy Quran daily</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">مجھے کا لج پہنچنے میں دو منٹ لگتے ہیں</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="10" id="correctOp9"
+                                   value="It takes me two minutes to reach the college" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel9" for="correctOp9">It takes me two minutes to reach
+                                the college</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="10" id="10B" value="It takes me two mintes to reach the college"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="10B">It takes me two mintes to reach the college</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="10" id="10C"
+                                   value="It takes me two minutes to reaches the college" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="10C">It takes me two minutes to reaches the college</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">وہ اپنے سر کو رومال سے ڈھانپ لیتا ہے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="11" id="11A" value="He covers his head with handkarchief"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="11A">He covers his head with handkarchief</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="11" id="11B" value="He coveres his head with handkerchief"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="11B">He coveres his head with handkerchief</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="11" id="correctOp10" value="He covers his head with handkerchief"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel10" for="correctOp10">He covers his head with
+                                handkerchief</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">میں اکثر کا لج پیدل چل پڑتا ہوں</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="12" id="correctOp11" value="I often make for my college on foot"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel11" for="correctOp11">I often make for my college on
+                                foot</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="12" id="12B" value="I often make for my college at foot"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="12B">I often make for my college at foot</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="12" id="12C" value="I often make  my college on foot"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="12C">I often make my college on foot</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">وہ اپنے دانت خلال کرتا ہے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="13" id="correctOp12" value="He picks his teeth " class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel12" for="correctOp12">He picks his teeth </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="13" id="13B" value="He pick his teeth " class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="13B">He pick his teeth </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="13" id="13C" value="He picks his teeths" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="13C">He picks his teeths</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">نئی بس فراٹے بھرتی ہوئی جاتی ہے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="14" id="14A" value="The new bus goes at a zoom" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="14A">The new bus goes at a zoom</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="14" id="14B" value="The new bus go with a zoom" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="14B">The new bus go with a zoom</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="14" id="correctOp13" value="The new bus goes with a zoom"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel13" for="correctOp13">The new bus goes with a
+                                zoom</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">وہ بڑے معقول دلائل دیتا ہے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="15" id="correctOp14" value="He gives very cogent points"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel14" for="correctOp14">He gives very cogent
+                                points</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="15" id="15B" value="He gives very congent points" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="15B">He gives very congent points</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="15" id="15C" value="He gives very cogant points" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="15C">He gives very cogant points</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">دو بجے دوپہر کو مجھے سخت بھوک لگتی ہے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="16" id="correctOp15" value="I feel much appetite at 2 pm"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel15" for="correctOp15">I feel much appetite at 2
+                                pm</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="16" id="16B" value="I feel much appitite at 2 pm" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="16B">I feel much appitite at 2 pm</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="16" id="16C" value="I feel much apetite at 2 pm" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="16C">I feel much apetite at 2 pm</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">میں ٹھیک نو بجے اپنا کام شروع کر دیتاہوں</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="17" id="17A" value="I start my work preceisly at 9 am"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="17A">I start my work preceisly at 9 am</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="17" id="17B" value="I start my work precisly at 9 am"
+                                   class="wrong" style="float: left; padding-top: 5px;">
+                            <label class="option1" for="17B">I start my work precisly at 9 am</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="17" id="correctOp16" value="I start my work preciesly at 9 am"
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel16" for="correctOp16">I start my work preciesly at 9
+                                am</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">میں سگریٹ پینے سے اُسے منع کرتا ہوں</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="18" id="18A" value="I forbid him not to smoke " class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="18A">I forbid him not to smoke </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="18" id="correctOp17" value="I forbid him to smoke "
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel17" for="correctOp17">I forbid him to smoke </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="18" id="18C" value="I forbid him to smokes" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="18C">I forbid him to smokes</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">بس کنڈیکٹر میرے پاس آتا ہے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="19" id="correctOp18" value="Bus conductor comes to me "
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel18" for="correctOp18">Bus conductor comes to
+                                me </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="19" id="19B" value="Bus conductor come to me " class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="19B">Bus conductor come to me </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="19" id="19C" value="Bus conductor comes at me " class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="19C">Bus conductor comes at me </label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">وہ مجھ سے کرایہ مانگتا ہے</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="20" id="20A" value="He asks me for fair" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="20A">He asks me for fair</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="20" id="20B" value="He askes me for fare" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="20B">He askes me for fare</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="20" id="correctOp19" value="He asks me for fare " class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel19" for="correctOp19">He asks me for fare </label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">محنتی </p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="21" id="21A" value="Deligent" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="21A">Deligent</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="21" id="correctOp20" value="Diligent" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel20" for="correctOp20">Diligent</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="21" id="21C" value="Dilegent" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="21C">Dilegent</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">سزا یافتہ </p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="22" id="22A" value="Leg" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="22A">Leg</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="22" id="22B" value="Lage" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="22B">Lage</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="22" id="correctOp21" value="Lag" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel21" for="correctOp21">Lag</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">اجڈ </p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="23" id="correctOp22" value="Put" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel22" for="correctOp22">Put</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="23" id="23B" value="Puts" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="23B">Puts</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="23" id="23C" value="Putt" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="23C">Putt</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">رشوت خور</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="24" id="24A" value="Vanal" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="24A">Vanal</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="24" id="correctOp23" value="Venal" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel23" for="correctOp23">Venal</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="24" id="24C" value="Venle" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="24C">Venle</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">جھگڑا لُو </p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="25" id="25A" value="Brewler" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="25A">Brewler</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="25" id="25B" value="Brawlar" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="25B">Brawlar</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="25" id="correctOp24" value="Brawler" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel24" for="correctOp24">Brawler</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">اتنا بڑا جتنا سورج</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="26" id="correctOp25" value="As ageless as the sun" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel25" for="correctOp25">As ageless as the sun</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="26" id="26B" value="As ageless is the sun" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="26B">As ageless is the sun</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="26" id="26C" value="As agelass as the sun" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="26C">As agelass as the sun</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">اتنے ملتے جُلتے جتنے دو مٹر</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="27" id="27A" value="As alikes as two peas " class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="27A">As alikes as two peas </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="27" id="correctOp26" value="As alike as two peas " class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel26" for="correctOp26">As alike as two peas </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="27" id="27C" value="As alike as two pea" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="27C">As alike as two pea</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">اتنا اکیلا جتنا کوڑھ کا مریض</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="28" id="correctOp27" value="As alone as a leper" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel27" for="correctOp27">As alone as a leper</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="28" id="28B" value="As alone as a lepear " class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="28B">As alone as a lepear </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="28" id="28C" value="As along as a leper" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="28C">As along as a leper</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">اتنا ناراض جتنا بھڑ</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="29" id="correctOp28" value="As angry as a wasp" class="correct"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel28" for="correctOp28">As angry as a wasp</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="29" id="29B" value="As angry as a waspe" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="29B">As angry as a waspe</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="29" id="29C" value="As angry as a wasep" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="29C">As angry as a wasep</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="urduText">
+                <p align="right" style="color: black;font-size: 200%">اتنی دور جتنے قُطب</p>
+            </div>
+            <div id="englishText" class="table-responsive" style="display: block;">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <input type="radio" name="30" id="30A" value="As fare apart as the poles " class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="30A">As fare apart as the poles </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="30" id="30B" value="As far apart as the pole" class="wrong"
+                                   style="float: left; padding-top: 5px;">
+                            <label class="option1" for="30B">As far apart as the pole</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="30" id="correctOp29" value="As far apart as the poles "
+                                   class="correct" style="float: left; padding-top: 5px;">
+                            <label class="option1" id="correctLabel29" for="correctOp29">As far apart as the
+                                poles </label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <input type="button" class="btn" value="View Correct Answers" onclick="viewCorrect()">
+            <input type="button" class="btn" value="View Score" onclick="score()">
+        </form>
+
+        <h1 style="padding-left: 3%" id="score">Score:</h1>
+    </div>
+
+        <script>
+            function viewCorrect() {
+                for (var i = 0; i < 30; i++) {
+                    document.getElementById("correctLabel" + i.toString()).style.backgroundColor = "#b8f2a2";
+                }
+            }
+            function score() {
+                var temp = 0;
+                for (var i = 0; i < 30; i++) {
+                    if (document.getElementById("correctOp" + i.toString()).checked) {
+                        temp++;
+                    }
+                }
+
+                temp = (temp / 30) * 100;
+
+                if(temp>=86){
+                    document.getElementById("score").innerHTML = "Score: " + temp.toString()+". Great Job!. You should now proceed to the quiz.";
+                }else if(temp>=72){
+                    document.getElementById("score").innerHTML = "Score: " + temp.toString()+". Nice! You got potential to do better.";
+                }else{
+                    document.getElementById("score").innerHTML = "Score: " + temp.toString()+". You should take the lesson again.";
+                }
+
+            }
+        </script>
+
+
+
+{% endblock %}

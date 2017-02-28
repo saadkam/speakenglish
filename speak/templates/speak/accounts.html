@@ -1,0 +1,72 @@
+{#{% extends 'speak/BASE.html' %}#}
+{##}
+{#{% block activeAccountDetail %} class="active" {% endblock %}#}
+{##}
+{##}
+{#{% block body %}#}
+{#{{ User_ID }}<br>#}
+{#{{ UserName }}<br>#}
+{#{{ User_Info.Phone }}<br>#}
+{#{{ User_Info.Address }}<br>#}
+{#{% for payment in User_Payments %}#}
+{#    {{ payment.date }}<br>{{ payment.Expiry }}<br><br><br>#}
+{#{% endfor %}#}
+{#<h1> Please be sure to make payments before expiry to continue using service</h1>#}
+{#{% endblock %}#}
+{##}
+
+
+{% extends 'speak/BASE.html' %}
+{% block activeAccountDetail %} class="active" {% endblock %}
+{% block body %}
+    <div class="wrapper row4">
+    <h1 style="text-align: center; padding-top: 3%;">ACCOUNT DETAILS</h1>
+        <main class="container clear">
+            <div class="content">
+                <div class="group demo">
+                    <div class="one_third first detailsAbout">User ID:</div>
+                    <div class="two_third details" >{{ User_ID }}</div>
+                </div>
+            </div>
+        <br>
+            <div class="content">
+                <div class="group demo">
+                    <div class="one_third first  detailsAbout">User Name:</div>
+                    <div class="two_third details">{{ UserName }}</div>
+                </div>
+            </div>
+        <br>
+            <div class="content">
+                <div class="group demo">
+                    <div class="one_third first  detailsAbout">Phone:</div>
+                    <div class="two_third details">{{ User_Info.Phone }}</div>
+                </div>
+            </div>
+        <br>
+            <div class="content">
+                <div class="group demo">
+                    <div class="one_third first  detailsAbout">Address:</div>
+                    <div class="two_third details">{{ User_Info.Address }}</div>
+                </div>
+            </div>
+        <br>
+            {% for payment in User_Payments %}
+                <div class="content">
+                <div class="group demo">
+                    <div class="one_third first  detailsAbout">Fee Last Paid On:</div>
+                    <div class="two_third details">{{ payment.date }}</div>
+                </div>
+            </div>
+                <br>
+                <div class="content">
+                <div class="group demo">
+                    <div class="one_third first detailsAbout">Due Date:</div>
+                    <div class="two_third details">{{ payment.Expiry }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        <br>
+        <div class="paymentReminder"><p> <span style="text-decoration: underline">NOTE:</span> Please be sure to make payments before due date to continue using our services</p></div>
+        </main>
+    </div>
+{% endblock %}

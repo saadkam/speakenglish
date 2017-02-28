@@ -1,0 +1,108 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+
+{% extends 'speak/BASE.html' %}
+
+{% block activePractice %} class="active" {% endblock %}
+
+{% block body %}
+
+
+{#<form action="{% url 'quiz' Quiz.Lesson.id %}" method="POST">#}
+{#{% csrf_token %}#}
+{#{% for Questions, mcq in Quest_dic.items %}#}
+{#    <br>#}
+{##}
+{#    {{ Questions.Question_Text }}#}
+{#    {% for MCQ in mcq %}#}
+{#        <br>#}
+{#        <input type="radio" name="MCQ {{ Questions.id }}" value="{{ MCQ.id }}">{{ MCQ.MCQ_Text }}#}
+{#    {% endfor %}#}
+{#    <hr>#}
+{#{% endfor %}#}
+{#<input type="submit" class="button" value="Done">#}
+{#</form>#}
+
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <main class="container clear">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content" onmousedown='return false;' onselectstart='return false;'>
+
+
+<form action="{% url 'quiz' Quiz.Lesson.id %}" method="POST">
+{% csrf_token %}
+{% for Questions, mcq in Quest_dic.items %}
+    <br>
+
+        <div id="urduText">
+        <p align="right" style="color: black;font-size: 200%">{{ Questions.Question_Text }}</p>
+      </div>
+
+    <div id="englishText" class="table-responsive" style="display: block;">
+    <table class="table table-striped">
+    {% for MCQ in mcq %}
+        <tr >
+            <td>
+                <input type="radio" name="MCQ {{ Questions.id }}" id="{{ Questions.id }}" value="{{ MCQ.id }}" style="float: left; padding-top: 5px;">
+             {% if MCQ.Is_Correct %}
+                 <div class="correct">
+                 <label class="option1" for="{{ Questions.id }}" >{{ MCQ.MCQ_Text }}</label>
+{#                     <span class="option1" style="vertical-align: middle;">{{ MCQ.MCQ_Text }}</span>#}
+                 </div>
+             {% elif MCQ.Is_Correct == False %}
+                 <label class="option1" for="{{ Questions.id }}">{{ MCQ.MCQ_Text }}</label>
+{#                 <span class="option1" style="vertical-align: middle;">{{ MCQ.MCQ_Text }}</span>#}
+             {% endif %}
+            </td>
+
+
+        </tr>
+    {% endfor %}
+    </table>
+    </div>
+
+
+    <hr>
+{% endfor %}
+<input type="button" value="View Correct Answers" onclick="shw()">
+<input type="submit" class="button" value="Done" >
+</form>
+
+    </div>
+
+    <div class="clear"></div>
+  </main>
+
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<script>
+function shw() {
+    var x = document.getElementsByClassName("correct");
+    for (i = 0; i < x.length; i++) {
+{#        x[i].classList.add("btn");#}
+        x[i].style.backgroundColor="#b8f2a2";
+    }
+}
+</script>
+
+
+
+{% endblock %}
+<!-- ################################################################################################ -->
+
+{#</body>#}
+{#</html>#}

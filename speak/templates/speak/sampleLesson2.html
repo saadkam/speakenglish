@@ -1,0 +1,141 @@
+{% extends 'speak/BASE.html' %}
+{% block activeLesson %}class="active" {% endblock %}
+
+{% block body %}
+
+    <div class="wrapper row4">
+        <main class="container clear">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+            <div class="content" onmousedown='return false;' onselectstart='return false;'>
+
+                <h1 id="lessonHeading" align="center">Lesson 1</h1>
+
+                <br/>
+                <br/>
+
+                <div id="urduText">
+                    <p align="right|justify" style="color: black;font-size: 200%">""</p>
+                </div>
+                <br/>
+                <br/>
+
+                <div id="englishText" style="display: none;">
+
+
+                </div>
+
+                <div id="audioTag" style="display: none; margin-top: 10px;">
+                    <audio controls id="audioTagSrc">
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support the audio tag.
+                    </audio>
+                </div>
+
+
+                <div>
+                    <input type="button" value="View Answers" id="viewAnswerBtn" onclick="displayAnswers();" class="btn"
+                           style="padding: -3px; margin-top: 10px;"/>
+
+                    <input type="button" value="Next Question" id="nextAnswerBtn" onclick="nextQuestion();"
+                           style="display: none; margin-top: 5px;" class="btn"/>
+
+                    <form action="{% url 'practice' %}">
+                        <input type="submit" value="Start Practice" id="nextTarget"
+                               style="display: none; margin-top: 5px;" class="btn"/>
+                    </form>
+
+
+                </div>
+
+            </div>
+
+            <div class="clear"></div>
+        </main>
+
+
+    </div>
+
+    <script src="../layout/scripts/jquery.min.js"></script>
+    <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+
+
+
+
+    <script type="text/javascript">
+
+
+        {#    urduArr=["۱) وہ اپنے چھو ٹے بچے کو پڑھ کر سنا رہا ہے", "۲) بچہ مسلسل رو رہا ہے","۳) ہماری چھٹیاں قریب آ رہی ہیں","۴) ا مدادی کارکن زلزلے کے شکار لوگوں کی مدد کی کوشش کر رہے ہیں","۵) وہ اپنا سامان سفر کھول رہا ہے"];#}
+        {#    engArr=["He is reading to his little son","The child is crying incessantly","Our vacations are approaching","Relief workers are trying to help earth quake victims","He is unpacking his luggage"];#}
+
+        var index = 0;
+
+
+        var temp;
+
+        var urduArr = ['A-- TRANSLATE INTO ENGLISH:<br>PATTERN : USE OF "NOT TO SPEAK of"<br><br>گاڑی چلانا تو دور کی بات وہ تو سائیکل نہیں چلا سکتا', 'انگلش بولنا تو دور کی بات تم انگلش پڑھ نہیں سکتے', 'اُس سے بات کرنا تو دُور کی بات تم تو اُسکی طرف دیکھ بھی نہیں سکتے', 'پارٹی میں جانا تو دور کی بات وہ تو گھر سے باہر نہیں نکلتا', 'مجھے مارنا تو دور کی بات وہ مجھے ہاتھ بھی نہیں لگا سکتا', 'پڑھانا تو دور کی با ت وہ تو صحیح پڑھ بھی نہیں سکتا ', 'جانا تو دور کی بات وہ تو صبح اُٹھا ہی نہیں ', 'سونا تو دور کی بات وہ تو لیٹ بھی نہیں سکتا', 'معمہ حل کرنا تو دور کی بات میں معمہ حل کرنے کی سوچ بھی نہیں سکتا', 'کمپیوٹر چلانا تو دور کی بات وہ اُسکو کھل بند بھی نہیں کر سکت', 'Human Qualities: <br><br>باذوق ', 'جنونی', 'چٹورا', 'خوش گفتار', 'کم گو', 'Idioms: <br><br>طاعون کی مانند ہلاکت انگیز', 'مکھی کی مانند خوش و خرم', 'بچے کی طرح معصوم', 'پتھر کی طرح سخت', 'سچائی کی مانند تلخ'];
+        var engArr = ['Not to speak of driving car, he can not ride a cycle', 'Not to speak of speaking english, you can not read english', 'Not to speak of talking to him, you can not look at him', 'Not to speak of going to the party, he does not come out from home', 'Not to speak of beating me, he can not touch me', 'Not to speak of teaching, he can not read', 'Not to speak of going, he did not get up in the morning', 'Not to speak of sleeping, he can not lay', 'Not to speak of solving a puzzle, I can not think to solve a puzzle', 'Not to speak of operating the computer, he can not on/off the it', 'Aesthetic', 'Maniac', 'Gourmand', 'Eloquent', 'Taciturn', 'As killing as plague', 'As joyful as a fly', 'As innocent as a baby', 'As hard as a flint', 'As harsh as truth'];
+        var count = 20;
+
+
+        document.getElementById('urduText').innerHTML = urduArr[index];
+        document.getElementById('urduText').align = 'left';
+        document.getElementById('urduText').style.color = 'black';
+        document.getElementById('urduText').style.fontSize = "x-large";
+
+
+         var audioArr = ['Not to speak of driving car, he can not ride a cycle', 'Not to speak of speaking english, you can not read english', 'Not to speak of talking to him, you can not look at him', 'Not to speak of going to the party, he does not come out from home', 'Not to speak of beating me, he can not touch me', 'Not to speak of teaching, he can not read', 'Not to speak of going, he did not get up in the morning', 'Not to speak of sleeping, he can not lay', 'Not to speak of solving a puzzle, I can not think to solve a puzzle', 'Not to speak of operating the computer, he can not on-off the it', 'Aesthetic', 'Maniac', 'Gourmand', 'Eloquent', 'Taciturn', 'As killing as plague', 'As joyful as a fly', 'As innocent as a baby', 'As hard as a flint', 'As harsh as truth'];
+
+
+
+        for(var j=0; j<count; j++){
+            audioArr[j]=audioArr[j].toLowerCase()+'.mp3';
+            audioArr[j]=audioArr[j].replace("%20"," ");
+            console.log(engArr[j]);
+        }
+
+
+
+
+        function displayAnswers() {
+
+            document.getElementById('englishText').innerHTML = engArr[index];
+            document.getElementById('englishText').style.display = 'block';
+            document.getElementById('englishText').style.color = 'red';
+            document.getElementById('englishText').style.fontSize = "x-large";
+
+            count--;
+
+            if (count <= 0) {
+                document.getElementById('nextTarget').style.display = 'block';
+                return;
+            }
+
+
+            document.getElementById('nextAnswerBtn').style.display = 'block';
+            document.getElementById('audioTagSrc').src = "..\\..\\static\\audio\\"+audioArr[index] ;
+            document.getElementById('audioTag').style.display = 'block';
+
+
+        }
+
+        function nextQuestion() {
+
+            if (count > 0) {
+                document.getElementById('englishText').style.display = 'none';
+                document.getElementById('audioTag').style.display = 'none';
+                document.getElementById('urduText').innerHTML = urduArr[++index];
+                document.getElementById('urduText').align = 'left';
+                document.getElementById('nextAnswerBtn').style.display = 'none';
+                document.getElementById('urduText').style.color = 'black';
+                document.getElementById('urduText').style.fontSize = "x-large";
+            }
+
+
+        }
+
+
+    </script>
+
+
+{% endblock %}

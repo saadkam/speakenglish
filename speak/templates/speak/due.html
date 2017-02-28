@@ -1,0 +1,27 @@
+{% extends 'speak/BASE.html' %}
+{% block body %}
+
+     <div class="wrapper row4">
+    <h1 style="text-align: center; padding-top: 3%; color: red;">Your account has been Suspended. Please pay the Fee to continue learning.</h1>
+        <main class="container clear">
+            <div class="content">
+                <div class="group demo">
+                    <div class="one_third first detailsAbout">{{ Name }}</div>
+                    <div class="two_third details" >{{ ID }}</div>
+                </div>
+            </div>
+        <br>
+            <div class="content">
+                <div class="group demo">
+                    <div class="one_third first  detailsAbout">User Name:</div>
+                    <div class="two_third details">{{ UserName }}</div>
+                </div>
+            </div>
+        <br>
+    </main>
+    </div>
+    <br>
+    <h1> </h1>
+
+{% endblock %}
+

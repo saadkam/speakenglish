@@ -1,0 +1,46 @@
+{% extends 'speak/BASE.html' %}
+
+{% block body %}
+
+{#    {{ Test.Name }}#}
+{#    {{ score }}#}
+{#    {{ percentage }}#}
+{##}
+{##}
+{#    {% if cleared %}#}
+{#        {% if practice %}#}
+{#            <a href="{% url 'quiz' Test.Lesson.id %}"> Looks like you cleared the practice round you should try quiz</a>#}
+{#        {% elif practice == None %}#}
+{#            Cleared This lesson#}
+{#        {% endif %}#}
+{#    {% elif cleared == False %}#}
+{#        Try again please#}
+{#    {% endif %}#}
+
+    <div class="wrapper row4">
+        <main class="container clear">
+            <div class="content">
+
+                <h3>{{ Test.Name }}</h3>
+
+                <div class="group btmspace-50 demo">
+                    <div class="one_half first">{{ score }}</div>
+                    <div class="one_half">{{ percentage }}</div>
+                </div>
+
+                {% if cleared %}
+                {% if practice %}
+                    <h5 style="color: #3b8000;"><a href="{% url 'quiz' Test.Lesson.id %}"> Looks like you cleared the practice round you should try quiz</a></h5>
+                {% elif practice == None %}
+                    Cleared This lesson
+                {% endif %}
+                {% elif cleared == False %}
+                    Try again please
+                {% endif %}
+
+            </div>
+        </main>
+    </div>
+
+
+{% endblock %}

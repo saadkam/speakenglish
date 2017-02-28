@@ -1,0 +1,71 @@
+{% extends 'speak/BASE.html' %}
+
+{% block hrefcss %}
+    {% load static %}
+<link rel="stylesheet" href="{% static 'layout/styles/layout.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% endblock %}
+
+{% block activeLogin %} class="active" {% endblock %}
+
+{% block body %}
+
+<div class="login-wrap wrapper row3" >
+
+	<div class="login-html" style="top:.6em;">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                {% for fields in SignIn %}
+                <div class="group">
+                    <label class="label" for="{{ fields.name }}">{{ fields.label }}</label>
+                    {{ fields }}
+                </div>
+                {% endfor %}
+                {% if message %}
+                <div>{{ message }}</div>
+
+                {% endif %}
+				<div class="group">
+					<input type="submit" class="button" value="Sign In">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#forgot">Forgot Password?</a>
+				</div>
+            </form>
+            </div>
+			<div class="sign-up-htm">
+                <form action="{% url 'signup' %}" method="post">
+				    {% csrf_token %}
+                    {% for fields in NewUser %}
+                    <div class="group">
+                        <label class="label" for="{{ fields.name }}">{{ fields.label }}</label>
+                        {{ fields }}
+                    </div>
+                {% endfor %}
+                <div class="group">
+					    <label for="pass" class="label">Repeat Password</label>
+					    <input id="pass" name="rep_password" type="password" class="input" data-type="password">
+                        <label for="Address" class="label">Address</label>
+                        <input id="Address" name="Address" type="text" class="input" data-type="text">
+                        <label for="phone" class="label">Phone</label>
+                        <input id="phone" name="phone" type="text" class="input" data-type="text">
+				    </div>
+				    <div class="group">
+					    <input type="submit" class="button" value="Sign Up">
+				</div>
+                </form>
+                <div class="hr"></div>
+				<div class="foot-lnk">
+					<label for="tab-1">Already Member?</label></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

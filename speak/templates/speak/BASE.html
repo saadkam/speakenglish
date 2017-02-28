@@ -1,0 +1,267 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--
+Template Name: websiteNameHere
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+
+-->
+{% load staticfiles %}
+<html>
+<head>
+<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+<title>Easy Spoken English</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    {% load static %}
+<link href=" {% static 'layout/styles/layout.css' %} " rel="stylesheet" type="text/css" media="all">
+    {% block hrefcss %}
+
+    {% endblock %}
+
+
+<style>
+    input[type="radio"] {
+      margin-top: 5px;
+      vertical-align: middle;
+    }
+    .details{
+        background-color: #CCCCCC;
+        color: #000000;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .detailsAbout{
+        background-color: #979797;
+        color: #ffffff;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .paymentReminder{
+        color: red;
+    }
+    .row3{
+        border-color: #1161EE;
+    }
+
+
+    #clockdiv{
+        font-family: sans-serif;
+        color: #fff;
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #clockdiv > div{
+        padding: 10px;
+        border-radius: 3px;
+        background: #1161EE;
+        display: inline-block;
+    }
+
+    #clockdiv div > span{
+        padding: 15px;
+        border-radius: 3px;
+        background: #1161EE;
+        display: inline-block;
+    }
+
+    .smalltext{
+        padding-top: 5px;
+        font-size: 16px;
+    }
+
+    .dalign{
+        align: "center";
+    }
+
+
+</style>
+
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="clear">
+    <!-- ################################################################################################ -->
+    <div class="fl_left">
+      <ul class="nospace inline">
+        <li><i class="fa fa-phone"></i> +xx (xxx) xx xxxx</li>
+        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+{#        <li><a class="faicon-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>#}
+{#        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>#}
+{#        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>#}
+{#        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>#}
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+{#        <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>#}
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+
+      <h1><img src="{% static 'images/LOGO.png' %}" class="responsive" ><a href="{%  url 'home' %}"></a></h1>
+
+    </div>
+{#    <div class="fl_right">#}
+{#      <form class="clear" method="post" action="#">#}
+{#        <fieldset>#}
+{#          <legend>Search:</legend>#}
+{#          <input type="text" value="" placeholder="Search Here">#}
+{#          <button class="fa fa-search" type="submit" title="Search"><em>Search</em></button>#}
+{#        </fieldset>#}
+{#      </form>#}
+{#    </div>#}
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <nav id="mainav" class="clear">
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li {% block activeHome %} {% endblock %}><a href="{% url 'home' %}">Home</a></li>
+<!--      <li><a class="drop" href="#">Pages</a>
+        <ul>
+          <li><a href="pages/gallery.html">Gallery</a></li>
+          <li><a href="pages/full-width.html">Full Width</a></li>
+          <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+          <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+          <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+        </ul>
+      </li>
+      <li><a class="drop" href="#">Dropdown</a>
+        <ul>
+          <li><a href="#">Level 2</a></li>
+          <li><a class="drop" href="#">Level 2 + Drop</a>
+            <ul>
+              <li><a href="#">Level 3</a></li>
+              <li><a href="#">Level 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>-->
+        <li {% block activeAboutUs %} {% endblock %}><a href="{% url 'aboutUs' %}">About Us</a></li>
+      <li {% block activeLesson %} {% endblock %}><a href="{%  url 'lessons' %}">Lessons</a></li>
+      <li {% block activePractice %} {% endblock %}><a href="{%  url 'practice' %}">Practice</a></li>
+      <li {% block activeQuizes %} {% endblock %}><a href="{%  url 'quizes' %}">Testing</a></li>
+      <li {% block activeAccountDetail %} {% endblock %}><a href="{% url 'accounts' %}">Account Details</a></li>
+      {% if not username %}
+      <li {% block activeLogin %} {% endblock %}><a href="{% url 'login' %}"><i class="fa fa-user"></i> Login/Sign Up</a></li>
+      {% elif username %}
+      <li class="active" >{{username}}</li>
+      <li {% block activeLogout %} {% endblock %}><a href="{% url 'signout' %}">Logout</a></li>
+      {% endif %}
+
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+
+
+
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+
+    <div class="wrapper row3 bgded" style="background-image:url('../static/images/demo/backgrounds/1-.png');">
+    <div class="overlay">
+      <div id="breadcrumb" class="clear">
+        <!-- ################################################################################################ -->
+
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+  </div>
+
+
+
+{% block body %}
+{% endblock %}
+
+<div class="wrapper row5 bgded" style="background-image:url({% static 'images/demo/backgrounds/1.png' %});">
+  <div class="overlay">
+    <footer id="footer" class="clear">
+      <!-- ################################################################################################ -->
+      <div class="one_quarter first">
+        <h6 class="title">Easy Spoken English</h6>
+        <address class="btmspace-15">
+        Company Name<br>
+        </address>
+        <ul class="nospace">
+          <li class="btmspace-10"><span class="fa fa-phone"></span>+xx (xxx) xxx xxxx</li>
+          <li><span class="fa fa-envelope-o"></span> info@domain.com</li>
+        </ul>
+      </div>
+      <div class="one_quarter">
+        <h6 class="title">Quick Links</h6>
+        <ul class="nospace linklist" >
+          <li><a href="#" style="color:white">link 1</a></li>
+          <li><a href="#" style="color:white">link 2</a></li>
+          <li><a href="#" style="color:white">link 3</a></li>
+          <li><a href="#" style="color:white">link 4</a></li>
+          <li><a href="#" style="color:white">link 5</a></li>
+        </ul>
+      </div>
+      <div class="one_quarter">
+        <h6 class="title">About Developers</h6>
+
+          <h2 class="nospace" ><a href="#" style="color:white">developersNameHere</a></h2>
+          <p>Some data about developers.</p>
+
+      </div>
+      <div class="one_quarter">
+        <h6 class="title">Grab Our Newsletter</h6>
+        <form method="post" action="#">
+          <fieldset>
+            <legend>Newsletter:</legend>
+            <input class="btmspace-15" type="text" value="" placeholder="Name">
+            <input class="btmspace-15" type="text" value="" placeholder="Email">
+            <button type="submit" value="submit">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </footer>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row6">
+  <div id="copyright" class="clear">
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Easy Spoken English</a></p>
+
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+</body>
+</html>

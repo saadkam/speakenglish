@@ -1,0 +1,157 @@
+{% extends 'speak/BASE.html' %}
+
+{% block body %}
+{#{{ Lesson.Name }}#}
+
+{#{% for audios in Audios %}#}
+{#<h1>{{ audios.Audio_Text }}</h1>#}
+{#<audio controls>#}
+{#  <source src=" {{ audios.Audio_File.url}} " type="audio/mpeg">#}
+{#  Your browser does not support the audio tag.#}
+{#</audio>#}
+{#    {{ audios.Audio_Urdu }}#}
+{#    <br>#}
+{#{% endfor %}#}
+
+
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row4">
+    <main class="container clear">
+      <!-- main body -->
+      <!-- ################################################################################################ -->
+      <div class="content" onmousedown='return false;' onselectstart='return false;'>
+
+        <h1 id="lessonHeading" align="center">{{ Lesson.Name }}</h1>
+
+        <br/>
+        <br/>
+
+        <div id="urduText">
+         <p align="right|justify" style="color: black;font-size: 200%">""</p>
+       </div>
+       <br/>
+       <br/>
+
+       <div id="englishText" style="display: none;">
+
+
+
+       </div>
+
+          <div id="audioTag" style="display: none; margin-top: 10px;">
+              <audio controls id="audioTagSrc" >
+              <source src="{{ Audios.0.Audio_File.url}} " type="audio/mpeg">
+              Your browser does not support the audio tag.
+          </audio>
+          </div>
+
+
+       <div>
+       <input type="button" value="View Answers" id="viewAnswerBtn" onclick="displayAnswers();" class="btn" style="padding: -3px; margin-top: 10px;" />
+
+           <input type="button" value="Next Question" id="nextAnswerBtn" onclick="nextQuestion();" style="display: none; margin-top: 5px;" class="btn" />
+
+           <form action="{%  url 'practice' %}" >
+                <input type="submit" value="Start Practice" id="nextTarget" style="display: none; margin-top: 5px;" class="btn"  />
+           </form>
+
+
+       </div>
+
+     </div>
+
+     <div class="clear"></div>
+   </main>
+
+
+ </div>
+
+    <script src="../layout/scripts/jquery.min.js"></script>
+  <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+
+
+
+
+  <script type="text/javascript">
+
+
+{#    urduArr=["۱) وہ اپنے چھو ٹے بچے کو پڑھ کر سنا رہا ہے", "۲) بچہ مسلسل رو رہا ہے","۳) ہماری چھٹیاں قریب آ رہی ہیں","۴) ا مدادی کارکن زلزلے کے شکار لوگوں کی مدد کی کوشش کر رہے ہیں","۵) وہ اپنا سامان سفر کھول رہا ہے"];#}
+{#    engArr=["He is reading to his little son","The child is crying incessantly","Our vacations are approaching","Relief workers are trying to help earth quake victims","He is unpacking his luggage"];#}
+
+    var index=0;
+
+
+    var temp;
+
+    var audioArr = new Array();
+    var urduArr = new Array();
+    var engArr = new Array();
+var count=0;
+
+    {% for audios in Audios %}
+        temp="{{ audios.Audio_File.url}}";
+        audioArr.push(temp);
+        temp="{{ audios.Audio_Text}}";
+        engArr.push(temp);
+        temp="{{ audios.Audio_Urdu|linebreaksbr}}";
+        temp = temp.replace(/(?:\r\n|\r|\n)/g, '<br />');
+        urduArr.push(temp);
+        count++;
+
+    {% endfor %}
+
+   // var test=audioArr[0];
+
+
+
+
+    document.getElementById('urduText').innerHTML=urduArr[index];
+    document.getElementById('urduText').align='left';
+    document.getElementById('urduText').style.color='black';
+    document.getElementById('urduText').style.fontSize = "x-large";
+
+
+    function displayAnswers() {
+
+      document.getElementById('englishText').innerHTML=engArr[index];
+      document.getElementById('englishText').style.display='block';
+      document.getElementById('englishText').style.color='red';
+      document.getElementById('englishText').style.fontSize = "x-large";
+
+        count--;
+
+        if (count<=0){
+            document.getElementById('nextTarget').style.display='block';
+            return;
+        }
+
+
+
+      document.getElementById('nextAnswerBtn').style.display='block';
+        document.getElementById('audioTagSrc').src=audioArr[index];
+        document.getElementById('audioTag').style.display='block'
+
+
+    }
+
+    function nextQuestion() {
+
+        if (count>0) {
+            document.getElementById('englishText').style.display = 'none';
+            document.getElementById('audioTag').style.display = 'none'
+            document.getElementById('urduText').innerHTML = urduArr[++index];
+            document.getElementById('urduText').align = 'left';
+            document.getElementById('nextAnswerBtn').style.display = 'none';
+            document.getElementById('urduText').style.color = 'black';
+            document.getElementById('urduText').style.fontSize = "x-large";
+        }
+
+
+    }
+
+
+  </script>
+
+{% endblock %}

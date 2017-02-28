@@ -1,0 +1,32 @@
+{% extends 'speak/BASE.html' %}
+
+{% block activeLogin %}class="active" {% endblock %}
+
+{% block body %}
+
+    <div class="wrapper row4">
+    <h1 style="text-align: center; padding-top: 3%;">RESET PASSWORD</h1>
+        <p style="text-align: center;">An Email containing a Link to reset password would be sent to you.</p>
+        <main class="container clear content">
+            <form action="{% url 'forgotten' %}" method="post">
+                {% csrf_token %}
+                <div class="group" >
+                <label for="username" class="label" for="username" >Enter Your Username</label>
+                <input id="username" name="username" type="text" class="input" data-type="text" placeholder="Username" >
+                    <br>
+                <label for="email" class="label" for="email">Enter Your E-mail Address</label>
+                <input id="email" name="email" type="text" class="input" data-type="text" placeholder="Email">
+                    <br>
+                <input type="submit" class="btn" value="Request New Password" onclick="alert('Email Have Been Sent')">
+                </div>
+                <div class="hr"></div>
+            </form>
+        </main>
+    </div>
+
+
+
+
+
+
+{% endblock %}
