@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'kv=j#$r8cjbu+b6)#(z@kjp2c-40rzdle6&3t$6dpt$i4+jep@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['104.37.190.203']
+ALLOWED_HOSTS = []
 
 STATIC_URL = '/static/'
 # Application definition
@@ -79,12 +79,8 @@ WSGI_APPLICATION = 'speakEnglish.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'easyspok_site',
-        'USER': 'easyspok_site',
-        'PASSWORD': 'xU5Jl%9kfCw@',
-        'HOST': '39.50.158.1',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -114,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE =  'Asia/Karachi'
-#'UTC+05:00'
+#TIME_ZONE = 'UTC+05:00'
 
 USE_I18N = True
 
@@ -130,8 +126,6 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-########## Deploy maybe
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-#SECURE_HSTS_SECONDS = False
-#SECURE_SSL_REDIRECT = False
+
+
+
